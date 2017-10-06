@@ -1,4 +1,4 @@
-package lianbiao;
+package linkedlist;
 
 public class testlink {
 	public static void main(String[] args) {

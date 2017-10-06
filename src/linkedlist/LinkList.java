@@ -1,4 +1,4 @@
-package lianbiao;
+package linkedlist;
 
 import java.util.Stack;
 
