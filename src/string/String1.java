@@ -16,7 +16,7 @@ public class String1 {
 		if(len==1) {
 			return s;
 		}else {
-			return ReverseString(s.substring(1)+s.charAt(0));
+			return ReverseString(s.substring(1))+s.charAt(0);
 		}
 	}
 	/**
@@ -54,5 +54,38 @@ public class String1 {
 		}
 		return new String(arr);
 	} 
+	
+	
+	/**
+	 * ÅÐ¶Ï×Ö·û´®ÊÇ·ñ»ØÎÄ
+	 * @param s
+	 * @return
+	 */
+	public static boolean isMemoString(String s) {
+		int lo=0;
+		int hi=s.length()-1;
+		while(lo>=hi) {
+			if(s.charAt(lo)!=s.charAt(hi))
+				return false;
+			lo++;
+			hi--;
+			
+		}
+		return true;
+		
+		
+	}
+	/**
+	 * 
+	 * @param s
+	 * @return
+	 */
+	public static boolean isMemoString2(String s) {
+		for(int i=0;i<s.length()/2;i++) {
+			if(s.charAt(i)!=s.charAt(s.length()-1-i))
+				return false;
+		}
+		return true;
+	}
 	
 }
